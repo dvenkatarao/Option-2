@@ -1,0 +1,10 @@
+services:
+  meridian:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: meridian-app:local
+    container_name: meridian-app-alt
+    ports:
+      - "4174:80"
+    restart: unless-stopped
